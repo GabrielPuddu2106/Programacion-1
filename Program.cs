@@ -1,29 +1,40 @@
-﻿{
-    Console.Title = "Sexo del individuo";
-
-    Int32 edad;
-
-    String name, sexo;
-
-    Console.WriteLine("Ingrese su name");
-    name = Console.ReadLine();  
-
-    Console.WriteLine("Ingrese la edad");
-    edad = Int32.Parse(Console.ReadLine());
-
-    Console.WriteLine("Ingrese su sexo (Hombre=M y Mujer=F)");
-    sexo = Console.ReadLine();  
-
-    if(sexo == "M"|| sexo == "m") // logica
+﻿
+using Ccine;
+namespace ConsoleApp1
+{
+    public class Program
     {
-        Console.WriteLine("\nEl Sr {0} ha sido registrado", name); // v
-    }
-    else
-    {
-        Console.WriteLine("nLa Sra {0} ha sido registrada", name); // f
-    }
+        public static void Main(String[] args)
+        {
+            string nombre1 = "hdla";
+            string telefono1 = " hdla";
+            string pagweb1 = "hdla ";
+            string direccionFacebook1 = "hdla ";
 
-    Console.WriteLine("\n\n");
-    Console.WriteLine("\n---->Fin del programa");
-    Console.ReadKey();
+
+            CCine cine  = new Ccine(nombre1, telefono1, pagweb1, direccionFacebook1);
+
+            cine.nombre = nombre1;
+            cine.telefono = telefono1;
+            cine.pagweb = pagweb1;
+            cine.direccionFacebook = direccionFacebook1; cine.nombre = nombre1;
+
+            Console.WriteLine("Ingrese el nombre del cine");
+            nombre1 = Console.ReadLine();
+
+            Console.WriteLine("Ingrese el telefono");
+            telefono1 = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la pagweb ");
+            pagweb1 = Console.ReadLine();
+
+            Console.WriteLine("Ingrese la direccion de facebook");
+            direccionFacebook1 = Console.ReadLine();
+
+
+
+            cine.mostrarDatos();
+
+        }
+    }
 }
