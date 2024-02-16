@@ -1,40 +1,17 @@
-﻿
-using Ccine;
-namespace ConsoleApp1
+namespace Prueba_2
 {
-    public class Program
+    internal static class Program
     {
-        public static void Main(String[] args)
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            string nombre1 = "hdla";
-            string telefono1 = " hdla";
-            string pagweb1 = "hdla ";
-            string direccionFacebook1 = "hdla ";
-
-
-            CCine cine  = new Ccine(nombre1, telefono1, pagweb1, direccionFacebook1);
-
-            cine.nombre = nombre1;
-            cine.telefono = telefono1;
-            cine.pagweb = pagweb1;
-            cine.direccionFacebook = direccionFacebook1; cine.nombre = nombre1;
-
-            Console.WriteLine("Ingrese el nombre del cine");
-            nombre1 = Console.ReadLine();
-
-            Console.WriteLine("Ingrese el telefono");
-            telefono1 = Console.ReadLine();
-
-            Console.WriteLine("Ingrese la pagweb ");
-            pagweb1 = Console.ReadLine();
-
-            Console.WriteLine("Ingrese la direccion de facebook");
-            direccionFacebook1 = Console.ReadLine();
-
-
-
-            cine.mostrarDatos();
-
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Prestamos());
         }
     }
 }
